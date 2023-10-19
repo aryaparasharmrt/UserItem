@@ -24,6 +24,15 @@ public class ItemService {
     }
 
     public List<Item> getAllItems(){
+	
+	  List<Item> itemList = new ArrayList<>();
+	  repository.findAll().forEach(item -> itemList.add(item));
+	  return itemList;
+    }
 
+    public Item get_ItemById(int Id) {
+    	
+	    Item item = userRepository.findById(Id);
+	    return item;
     }
 }
