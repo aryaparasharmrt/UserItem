@@ -16,5 +16,11 @@ public class UserService {
         return "User added successfully";
     }
 
+    // Creating or Writing Logic to get User
+    public User getUserById(int Id) {
+    	
+	    User user = userRepository.findById(Id);
 
+	    return user;
+    }
 }
