@@ -19,5 +19,11 @@ public class UserController {
     public String addUser(@RequestBody User user){
         return userService.addUser(user);
     }
-
+    
+    // Creating get user by Id
+    @GetMapping("/get_User/{Id}")
+    public User getUserById(@PathVariable int Id){
+    	
+	    return userService.getUserById(Id);
+    }
 }
